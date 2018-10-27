@@ -70,7 +70,7 @@ router.post('/socialshare/:id',function(req,res)
                 
                   newData.socialTitle=results.caption,
                   
-                  newData.socialImage=""
+                  newData.socialImage='/public/fles/1540558018432-photo.png'
                   newData.socialUrl= 'https://socialshare-js23.herokuapp.com' + req.url
                   res.render('index.pug', newData );
                 }})})
