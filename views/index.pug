@@ -51,7 +51,7 @@ block content
           button.btn.waves-effect.waves-light(type='submit', name='action')
             | Find
             i.material-icons.right send 
-    form(action='https://www.facebook.com/sharer/sharer.php?u=' + socialImage  method="POST"  )        
+    form(action='https://www.facebook.com/dialog/feed?app_id=443153576210730&redirect_uri=' + socialUrl + '&picture=' + socialImage + '&caption=' + socialTitle  method="POST"  )        
       .row
         .col.s12 
           button.btn.waves-effect.waves-light(type='submit', name='action')
