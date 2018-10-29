@@ -5,9 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs=require('fs');
-var cors =require('cors')
+// var cors =require('cors')
 /* connect to database */
 var mongoose = require('mongoose');
+var app = express();
+
 // mongoose.Promise = global.Promise;
 // mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost/dbphotogallery1');
@@ -21,8 +23,8 @@ require("./models/Photo");
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var app = express();
-app.use(cors);
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
