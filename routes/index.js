@@ -73,7 +73,7 @@ router.post('/socialshare/:id',function(req,res)
                   newData.title=results.caption,
                   
                   newData.image='https://socialshare-js23.herokuapp.com/' + results.path
-                   newData.url= 'https://socialshare-js23.herokuapp.com/' 
+                   newData.url= 'https://socialshare-js23.herokuapp.com' 
                   res.render('index.pug', newData);
                 }})})
 module.exports = router;
