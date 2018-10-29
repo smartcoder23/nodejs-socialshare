@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs=require('fs');
-
+var cors =require('cors')
 /* connect to database */
 var mongoose = require('mongoose');
 // mongoose.Promise = global.Promise;
@@ -17,11 +17,12 @@ mongoose.connect('mongodb://shubhamsethi:cssecure123@ds119449.mlab.com:19449/dbp
 .catch((err) => console.error(err));
 require("./models/Photo");
 /* Define routes */
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-
+app.use(cors);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
