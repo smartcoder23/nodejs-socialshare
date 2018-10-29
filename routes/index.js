@@ -3,7 +3,11 @@ var router    = express.Router();
 var upload    = require('./upload');
 var mongoose  = require('mongoose');
 var Photo     = mongoose.model('Photos');
-
+// if (typeof(window) !== 'undefined') {
+//   // code here
+//  const { fbShare } = require('simple-social-share');
+// }
+// const fbAppId = '443153576210730'
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
@@ -22,10 +26,8 @@ router.post('/upload', function(req, res) {
       if(error){
          res.redirect('/?msg=3');
       }else{
-        if(req.file == undefined){
-          
-          res.redirect('/?msg=2');
-
+     if(req.file == undefined){  
+           res.redirect('/?msg=2');
         }else{
              
             /**
@@ -68,10 +70,22 @@ router.post('/socialshare/:id',function(req,res)
               console.log("hello",results)
               var newData = {};
                 
-                  newData.socialTitle=results.caption,
+                  newData.title=results.caption,
                   
-                  newData.socialImage='https://socialshare-js23.herokuapp.com/' + results.path
-                  newData.socialUrl= 'https://zomato-backend.herokuapp.com/' 
-                  res.render('index.pug', newData );
+                  newData.image='https://socialshare-js23.herokuapp.com/' + results.path
+                   newData.url= 'https://socialshare-js23.herokuapp.com/' 
+                  res.render('index.pug', newData);
                 }})})
 module.exports = router;
+
+
+
+
+
+//  const itemData = {
+//    title: 'Item title',
+//    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ab nemo temporibus ex rerum at consequatur, eligendi, rem non quia odio! Quibusdam enim vero qui consequatur dicta doloremque aliquam. Quas.',
+//    image: 'https://thumb1.shutterstock.com/display_pic_with_logo/154447/235089946/stock-photo-cute-little-red-kitten-sleeps-on-fur-white-blanket-235089946.jpg'
+//  };
+//  ; // facebook developer ID, better to implement with .env if possible.
+ 

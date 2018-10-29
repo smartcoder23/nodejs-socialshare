@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs=require('fs');
+// const isClient = typeof window !== 'undefined'
+//  const {fbShare}  = require('simple-social-share');
 // var cors =require('cors')
 /* connect to database */
 var mongoose = require('mongoose');
@@ -62,5 +64,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(9900);
+app.listen(9990);
 module.exports = app;

@@ -37,7 +37,7 @@ block content
       .row
        .input-field.col.s12
         input#caption.validate(type='text' name="caption")
-        label(for='caption') Caption  
+        label(for='caption') Caption 
       
       .row
         .col.s12 
@@ -49,12 +49,8 @@ block content
         .col.s12 
           button.btn.waves-effect.waves-light(type='submit', name='action')
             | Find
-            i.material-icons.right send 
-    form(action='https://www.facebook.com/dialog/feed?app_id=443153576210730&display=popup' + '&uri=' + socialUrl + '&picture=' + socialImage + '&display=popup'  method="POST"  )        
+            i.material-icons.right send         
       .row
         .col.s12 
-          button.btn.waves-effect.waves-light(type='submit', name='action',)
-            | Upload To FB
-            i.material-icons.right send         
-
-
+          .fb-share-button(data-href='https://socialshare-js23.herokuapp.com/' data-layout='button_count' data-size='small' data-mobile-iframe='true')
+           a.fb-xfbml-parse-ignore(target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsocialshare-js23.herokuapp.com%2F&src=sdkpreparse') Share
