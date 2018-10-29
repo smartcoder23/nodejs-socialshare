@@ -70,7 +70,7 @@ router.post('/socialshare/:id',function(req,res)
               console.log("hello",results)
               var newData = {};
                 
-                  newData.title=results.caption,
+                  newData.title1=results.caption,
                   
                   newData.image='https://socialshare-js23.herokuapp.com/' + results.path
                    newData.url= 'https://socialshare-js23.herokuapp.com' 
