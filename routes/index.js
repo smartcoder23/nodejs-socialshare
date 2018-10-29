@@ -71,7 +71,7 @@ router.post('/socialshare/:id',function(req,res)
                   newData.socialTitle=results.caption,
                   
                   newData.socialImage='https://socialshare-js23.herokuapp.com/' + results.path
-                  newData.socialUrl= 'https://socialshare-js23.herokuapp.com/' 
+                  newData.socialUrl= 'https://zomato-backend.herokuapp.com/' 
                   res.render('index.pug', newData );
                 }})})
 module.exports = router;
