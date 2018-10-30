@@ -57,7 +57,7 @@ router.post('/upload', function(req, res) {
   });    
 });
 
-router.post('/socialshare/:id',function(req,res)
+router.get('/socialshare/:id',function(req,res)
 {
  // Let's check user-agents to see if this is a social bot. If so, let's serve a different layout to populate the og data so it looks pretty when sharing.
      console.log("ssassa",req);
