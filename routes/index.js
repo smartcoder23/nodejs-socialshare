@@ -70,9 +70,9 @@ router.post('/socialshare/:id',function(req,res)
               console.log("hello",results)
               var newData = {};
                 
-                  newData.title1=decodeURIComponent(results.caption),
+                  newData.title1=results.caption,
                   
-                  newData.image=decodeURIComponent('https://socialshare-js23.herokuapp.com/' + results.path)
+                  newData.image='https://socialshare-js23.herokuapp.com/' + results.path
                    newData.url= 'https://socialshare-js23.herokuapp.com' 
                   res.render('index.pug', newData);
                 }})})

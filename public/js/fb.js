@@ -1,12 +1,12 @@
-window.fbAsyncInit = function() {
-	FB.init({
-	  appId            : '443153576210730',
-	  autoLogAppEvents : true,
-	  xfbml            : true,
-	  version          : 'v2.10'
-	});
-	FB.AppEvents.logPageView();
-  };
+// window.fbAsyncInit = function() {
+// 	FB.init({
+// 	  appId            : '443153576210730',
+// 	  autoLogAppEvents : true,
+// 	  xfbml            : true,
+// 	  version          : 'v3.10'
+// 	});
+// 	FB.AppEvents.logPageView();
+//   };
 (function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
@@ -33,4 +33,16 @@ fjs.parentNode.insertBefore(js, fjs);
 // 	function (response) {
 // 	// Action after response
 // 	});
+// }
+// function ogShare() {
+// 	FB.ui({
+// 		method: 'share_open_graph',
+// 		action_type: 'og.likes',
+// 		action_properties: JSON.stringify({
+// 				object:'https://developers.facebook.com/docs/opengraph/getting-started',
+// 		})
+// }, function(response){
+// 		// Debug response (optional)
+// 		console.log(response);
+// });
 // }

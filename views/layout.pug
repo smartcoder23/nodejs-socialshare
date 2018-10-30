@@ -1,24 +1,25 @@
 doctype html
 html
   
-  
+
   head
-  
+  if(title1)
    meta#fb-app-id(property="fb:app_id" content="443153576210730")
    meta#fb-site-name(property='og:site_name', content='Social-share')
    meta#fb-title(property='og:title', content=title1)
    meta#fb-description(property='og:description', content=title1)
    meta#fb-url(property='og:url', content="https://socialshare-js23.herokuapp.com")
-   meta#fb-image(property='og:image', content= image )
+   meta#fb-image(property='og:image', content= image ) 
+
   
-   link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
-   link(rel='stylesheet', href='/stylesheets/style.css')
-   title Nodejs file upload To facebok
    
   body
-    block content
-    script(src="/js/fb.js")
-    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') 
+  block content
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  title Nodejs file upload To facebok
+  script(src="/js/fb.js")
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') 
     //-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
