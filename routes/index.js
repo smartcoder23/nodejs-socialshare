@@ -3,19 +3,19 @@ var router    = express.Router();
 var upload    = require('./upload');
 var mongoose  = require('mongoose');
 var Photo     = mongoose.model('Photos');
-const shareFacebook = require('share-facebook')
+// const shareFacebook = require('share-facebook')
 // if (typeof(window) !== 'undefined') {
 //   // code here
 //  const { fbShare } = require('simple-social-share');
 // }
 // const fbAppId = '443153576210730'
 /* GET home page. */
-shareFacebook({
-  quote: title1,
-  url: 'https://bukinoshita.io',
-  redirect_uri: 'https://bukinoshita.io',
-  app_id: 'APP_ID'
-})
+// shareFacebook({
+//   quote: title1,
+//   url: 'https://bukinoshita.io',
+//   redirect_uri: 'https://bukinoshita.io',
+//   app_id: 'APP_ID'
+// })
 router.get('/', function(req, res, next) {
 
   Photo.find({}, ['path','caption'], {sort:{ _id: -1} }, function(err, photos) {
