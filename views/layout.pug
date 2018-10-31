@@ -10,7 +10,11 @@ html
    meta#fb-description(property='og:description', content=title1)
    meta#fb-url(property='og:url', content=url)
    meta#fb-image(property='og:image', content= image ) 
-   
+   meta(prefix='og: http://ogp.me/ns#' property='og:title' content=title1)
+   meta(prefix='og: http://ogp.me/ns#' property='og:type' content=website)
+   meta(prefix='og: http://ogp.me/ns#' property='og:image' content=image)
+   meta(prefix='og: http://ogp.me/ns#' property='og:url' content=url)
+
    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
    link(rel='stylesheet', href='/stylesheets/style.css')
