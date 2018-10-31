@@ -63,7 +63,7 @@ router.post('/upload', function(req, res) {
 router.get('/socialshare/:id',function(req,res)
 {
  // Let's check user-agents to see if this is a social bot. If so, let's serve a different layout to populate the og data so it looks pretty when sharing.
-     console.log("ssassa",req);
+     console.log("ssassa",req.url);
       Photo.findOne({_id: req.params.id }, function(err, results) {
           if(err) {
 
@@ -76,7 +76,7 @@ router.get('/socialshare/:id',function(req,res)
                   newData.title1=results.caption,
                   
                   newData.image='https://socialshare-js23.herokuapp.com/' + results.path
-                   newData.url= 'https://socialshare-js23.herokuapp.com'
+                   newData.url= 'https://socialshare-js23.herokuapp.com' + req.url
                     res.render('index.pug', newData);
                 }})})
                
