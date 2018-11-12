@@ -11,7 +11,11 @@ html
    meta(prefix='og: http://ogp.me/ns#' property='og:type' content=website)
    meta(prefix='og: http://ogp.me/ns#' property='og:url' content=url)
    meta(prefix='og: http://ogp.me/ns#' property='og:image' content=image)
-  
+   script(type='text/javascript' src='http://code.jquery.com/jquery-1.5b1.js')
+   script(type='text/javascript' src='//platform.linkedin.com/in.js')
+   api_key:86wlkgy4tbshej
+   authorize: true
+   onLoad: onLinkedInLoad
    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
    link(rel='stylesheet', href='/stylesheets/style.css')
@@ -20,6 +24,8 @@ html
    
   body
   block content
+  script(type='in/Login').
+  script(src="/js/linkedin.js")
   script(src='//platform.linkedin.com/in.js' type='text/javascript')
   lang: en_US
   script(type='IN/Share' data-url='https://socialshare-js23.herokuapp.com/socialshare/' + id + '/?' ).
