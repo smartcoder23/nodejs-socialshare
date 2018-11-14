@@ -11,11 +11,11 @@ html
    meta(prefix='og: http://ogp.me/ns#' property='og:type' content=website)
    meta(prefix='og: http://ogp.me/ns#' property='og:url' content=url)
    meta(prefix='og: http://ogp.me/ns#' property='og:image' content=image)
-   script(type='text/javascript' src='https://code.jquery.com/jquery-1.5b1.js')
-   script(type='text/javascript' src='//platform.linkedin.com/in.js')
-   api_key:86wlkgy4tbshej
+   script(src="/js/linkedin.js")
+   script(type='text/javascript' src='https://platform.linkedin.com/in.js')
+   api_key:811y8puxuj9s3y
    authorize: true
-   onLoad: onLinkedInLoad
+   //onLoad: onLinkedInLoad
    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
    link(rel='stylesheet', href='/stylesheets/style.css')
@@ -25,9 +25,7 @@ html
   body
   block content
   script(type='in/Login').
-  script(src="/js/linkedin.js")
-  script(src='//platform.linkedin.com/in.js' type='text/javascript')
-  lang: en_US
+  input(type='button' onclick='liAuth()' value='Login1').
   script(type='IN/Share' data-url='https://socialshare-js23.herokuapp.com/socialshare/' + id + '/?' ).
   script(src="/js/fb.js")
   script(src='https://code.jquery.com/jquery-3.3.1.min.js')
