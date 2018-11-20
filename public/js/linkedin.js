@@ -43,10 +43,10 @@ IN.API.Raw("/people/~/shares?format=json")
 function abc(){
   console.log("hello_new");
 }
-function liAuth(){
+function liAuth(url){
   IN.User.authorize(function(){
-     return;
-      // onLinkedInLoad();
+     //return;
+       onLinkedInLoad(url);
       });
     //IN.Event.on(IN, "auth", shareContent);
   
