@@ -35,7 +35,7 @@ function shareContent(url){
   };
 IN.API.Raw("/people/~/shares?format=json")
   .method("POST")
-  .body(payload)
+  .body(JSON.stringify(payload))
   .result(onSuccess)
   .error(onError);
 }
