@@ -25,12 +25,12 @@ html
   
    
   body
-   //block content
-   //- var config = {
-   //-     a: title1,
-   //-     b: image,
-   //-     c: url
-   //- }
+   block content
+   - var config = {
+   -     a: title1,
+   -     b: image,
+   -     c: url
+   - }
   //script(type='IN/Login')
   //input(type='button' onclick=`liAuth(${JSON.stringify({title:title1,image:image,url:url})})` value='share')
   script(type='IN/Share' data-url='https://socialshare-js23.herokuapp.com/socialshare/' + id + '/?' ).
