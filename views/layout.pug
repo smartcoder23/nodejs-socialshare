@@ -12,7 +12,7 @@ html
    meta(prefix='og: http://ogp.me/ns#' property='og:url' content=url)
    meta(prefix='og: http://ogp.me/ns#' property='og:image' content=image)
    script(src="/js/linkedin.js")
-   script(type='text/javascript' src='https://platform.linkedin.com/in.js').
+   //script(type='text/javascript' src='https://platform.linkedin.com/in.js').
         api_key:811y8puxuj9s3y
         scope:r_basicprofile,r_emailaddress,w_share
         authorize:true
@@ -25,16 +25,16 @@ html
   
    
   body
-  block content
+ // block content
    - var config = {
    -     a: title1,
    -     b: image,
    -     c: url
    - }
-  //script(type='IN/Login').
-  input(type='button' onclick=`liAuth(${JSON.stringify({title:title1,image:image,url:url})})` value='share')
-  script(type='IN/Share' data-url='https://socialshare-js23.herokuapp.com/socialshare/' + id + '/?' ).
-  script(src="/js/fb.js")
-  script(src='https://code.jquery.com/jquery-3.3.1.min.js')
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') 
+  //script(type='IN/Login')
+ //input(type='button' onclick=`liAuth(${JSON.stringify({title:title1,image:image,url:url})})` value='share')
+ script(type='IN/Share' data-url='https://socialshare-js23.herokuapp.com/socialshare/' + id + '/?' ).
+ script(src="/js/fb.js")
+ script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+ script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') 
     //-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
